@@ -1,3 +1,5 @@
+//Script based on the work already researched by NCC and Sensepost.
+
 //CHANGEME
 var burpRootCA = "/data/local/tmp/certificates/ca.crt"
 

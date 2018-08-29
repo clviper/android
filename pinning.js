@@ -83,7 +83,7 @@ Java.perform(function x() {
     }
   
     try{
-	// Invalidate the certificate pinnet checks (if "setCertificatePinner" was called before the previous invalidation)
+	// Invalidate the certificate pinner checks (if "setCertificatePinner" was called before the previous invalidation)
     	var CertificatePinner = Java.use("com.squareup.okhttp.CertificatePinner");
     	CertificatePinner.check.overload('java.lang.String', '[Ljava.security.cert.Certificate;').implementation = function(p0, p1){
         	// do nothing

@@ -1,4 +1,6 @@
+//Created by @clviper
 //Script based on the work already researched by NCC and Sensepost.
+//Additional research done by me for the Bypass to SSLCertificateChecker-PhoneGap-Plugin and Outsystems SSL Pinning Plugin
 
 //CHANGEME
 var burpRootCA = "/data/local/tmp/certificates/ca.crt"

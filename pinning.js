@@ -23,10 +23,9 @@ Java.perform(function x() {
 
 	    // Load CAs from an InputStream
 	    console.log("[+] Loading our CA...")
-	    cf = CertificateFactory.getInstance("X.509");
+	    var cf = CertificateFactory.getInstance("X.509");
 	    
 	    try {
-		
 	    	var fileInputStream = FileInputStream.$new(burpRootCA);
 	    }
 	    catch(err) {
@@ -34,10 +33,10 @@ Java.perform(function x() {
 	    }
 	    
 	    var bufferedInputStream = BufferedInputStream.$new(fileInputStream);
-	  	var ca = cf.generateCertificate(bufferedInputStream);
+	    var ca = cf.generateCertificate(bufferedInputStream);
 	    bufferedInputStream.close();
 
-		var certInfo = Java.cast(ca, X509Certificate);
+	    var certInfo = Java.cast(ca, X509Certificate);
 	    console.log("[o] Our CA Info: " + certInfo.getSubjectDN());
 
 	    // Create a KeyStore containing our trusted CAs
